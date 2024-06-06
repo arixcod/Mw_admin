@@ -7,26 +7,35 @@ class ScanQrScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(247, 246, 240, 1),
-      appBar:  AppBar(
-        backgroundColor: const Color.fromRGBO(247, 246, 240, 1),
-        titleTextStyle: const TextStyle(
-            fontFamily: "Poppins",
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-            fontSize: 20),
-            title: const Text('Scan QR'),
-            leading: IconButton(
-          style: const ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(Colors.white),
-              shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                  side: BorderSide(color: Colors.grey, width: 1),
-                  borderRadius:
-                  BorderRadius.all(Radius.circular(8))))),
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back),
-        ),
-      ),
+             backgroundColor: Tcolors.scaffoldclr_admin,
+          appBar: AppBar(
+                    toolbarHeight: 80,
+                    elevation: 0,
+                    backgroundColor: const Color.fromRGBO(247, 246, 240, 1),
+                    leading: null,
+                    automaticallyImplyLeading: false, 
+                    title: Row(
+                    children: [
+                     Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                       borderRadius: BorderRadius.circular(8.0),
+                       border: Border.all(color:const Color(0XFFD9D9D9))   
+                      ),
+                      child:const Center(child: Icon(Icons.arrow_back)),
+                     ),
+
+                   const  SizedBox(width: 20,), 
+                      const Text('Scan QR',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold
+                      ),),
+                    ],
+                  ),
+                ),
+ 
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
