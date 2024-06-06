@@ -161,10 +161,11 @@ class BookingCard extends StatelessWidget {
                       SizedBox(
                         //use your own size 
                       
-                        width: 140,
+                        width: 120,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             side: BorderSide.none,
+                            padding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
                             backgroundColor: Colors.black,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(27),
@@ -182,10 +183,12 @@ class BookingCard extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 140,
+                        width: 120,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
+                             padding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+                          
                             side: BorderSide.none,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(27),
