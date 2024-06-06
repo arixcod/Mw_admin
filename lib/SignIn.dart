@@ -107,7 +107,7 @@ class MyHomePage extends StatelessWidget {
         SizedBox(
           height: 55,
           width: double.infinity,
-        child: Padding(
+           child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: ElevatedButton(
           style: ElevatedButton.styleFrom(

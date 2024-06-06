@@ -127,15 +127,21 @@ class _adminState extends State<admin> {
 class custom_card extends StatelessWidget {
   final Widget? child ;
   final double  height;
+  final EdgeInsetsGeometry? margin;
+
+
   const custom_card({
     super.key,
     required this.child,
-    this.height=150
+    this.height=150,
+    this.margin,
   });
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
+        margin:margin ,
         width: double.infinity,
         height: height,
         decoration: BoxDecoration(

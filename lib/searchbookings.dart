@@ -1,3 +1,4 @@
+import 'package:admin/admin_page.dart';
 import 'package:admin/utils/constatnts/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,8 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,11 +75,139 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ),
               ),
-            )
+            ),
+
+            const SizedBox(height: 20,),
+                Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: ListView.builder(
+                  itemCount: 3, // Replace with the actual number of bookings
+                  itemBuilder: (context, index) {
+                    return BookingCard();
+                  },
+                ),
+              ),
+            ),
           ],
         ),
- 
- 
+    );
+  }
+}
+class BookingCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return custom_card(
+      margin: EdgeInsets.only(bottom: 16.0),
+      height: 390,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Booking ID : KVDBH12345'),
+                Text('Date : 03/05/2024'),
+              ],
+            ),
+            SizedBox(height: 8.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Name : Deepak Kumar'),
+                Text('Slot : 15:00 - 19:00'),
+              ],
+            ),
+            SizedBox(height: 8.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Mobile : +91-xxxxxx4411'),
+                Text('Locker Qty. : 5'),
+              ],
+            ),
+            SizedBox(height: 8.0),
+            Text('Locker Name : Bhawan'),
+            SizedBox(height: 8.0),
+            Center(
+              child: Text(
+                'Locker No. 520',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+            SizedBox(height: 16.0),
+            Center(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),border: Border.all(color: Colors.black,width: 1)),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset(
+                        'assets/qr.png', // Replace with actual image asset path
+                        width: 100,
+                        height: 100,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 8.0),
+                  Text('Show the QR Code to Locker Volunteer'),
+                  SizedBox(height: 16.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        //use your own size 
+                      
+                        width: 140,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            side: BorderSide.none,
+                            backgroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(27),
+                              ),
+                          ), onPressed: () {
+                            // Handle print button press
+                          },
+                          child: Center(
+                            child: Text('Print',
+                              style: TextStyle(
+                                fontFamily: "Poppins",
+                                fontSize: 14,color: Colors.white,fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 140,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black,
+                            side: BorderSide.none,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(27),
+                            ),
+                          ), onPressed: () {
+                            // Handle release button press
+                          },
+                          child: Text('Release',
+                            style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 14,color: Colors.white,fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

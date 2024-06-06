@@ -2,9 +2,14 @@ import 'package:admin/admin_page.dart';
 import 'package:admin/utils/constatnts/colors.dart';
 import 'package:flutter/material.dart';
 
-class BookLocker extends StatelessWidget {
+class BookLocker extends StatefulWidget {
   
  
+  @override
+  State<BookLocker> createState() => _BookLockerState();
+}
+
+class _BookLockerState extends State<BookLocker> {
   List<String> timeSlots = [
     '15:00-19:00',
     '15:30-19:30',
@@ -16,10 +21,7 @@ class BookLocker extends StatelessWidget {
     // Add more time slots as needed
   
   ];
-  
-  
-  
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
