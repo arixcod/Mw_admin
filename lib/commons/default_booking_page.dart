@@ -81,9 +81,10 @@ class DefaultBookingPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 25,vertical: 10),
                   backgroundColor: Tcolors.textheadlineclr,
+                  side: BorderSide.none,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
-                    side: BorderSide.none
+                   
                     
                   )
                   ),
