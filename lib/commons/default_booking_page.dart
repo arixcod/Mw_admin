@@ -46,16 +46,15 @@ class DefaultBookingPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
           child: 
               custom_card(
-               height: MediaQuery.of(context).size.height/2, 
+                height: MediaQuery.of(context).size.height, 
                 child: Column(
-              
+               mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                //use Your Own Image           
-              const SizedBox(height: 20,),
-              Image.asset(TImages.defualt_scan_qr),
-              const SizedBox(height: 20,),
-               
-              const  Text("No Lockers Booked Yet"
+                              //use Your Own Image           
+                              Image.asset(TImages.defualt_scan_qr),
+                              const SizedBox(height: 20,),
+                               
+                              const  Text("No Lockers Rented Yet"
                 ,style: 
                   TextStyle(
                     fontFamily: "Poppins",
@@ -66,14 +65,14 @@ class DefaultBookingPage extends StatelessWidget {
                 ,),   
                 const SizedBox(height: 20,),
                 
-                           const   Text("Book Your Favourite Locker Through Book Locker",style: 
+                           const   Text("Book Your Favourite Locker Through Rent a Locker",style: 
                   TextStyle(
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w400,
                     fontSize: 14,
                     letterSpacing: 0.1
                   )),
-              
+                              
                 const SizedBox(height: 20,),
                         
                 ElevatedButton(
@@ -89,7 +88,7 @@ class DefaultBookingPage extends StatelessWidget {
                   )
                   ),
                   onPressed: 
-                 (){},child:Text(" GO TO BOOK LOCKER",style: 
+                 (){},child:Text(" GO TO RENT A LOCKER",style: 
                   TextStyle(
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w600,
@@ -97,7 +96,7 @@ class DefaultBookingPage extends StatelessWidget {
                     letterSpacing: 0.1
                   )))
                 ],
-              )) ),
+                              )) ),
         
     );
   }

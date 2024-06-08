@@ -9,6 +9,6 @@ class TImages {
   static const String scan_qr = "assets/icons/ic_scan.svg";
   
   // -default Image
-  static const String defualt_scan_qr = "assets/qr.png";
+  static const String defualt_scan_qr = "assets/book_locker.jpeg";
   
 }

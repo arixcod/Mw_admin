@@ -1,4 +1,5 @@
 import 'package:admin/booklocker.dart';
+import 'package:admin/commons/default_booking_page.dart';
 import 'package:admin/homepage.dart';
 import 'package:admin/scanqr.dart';
 import 'package:admin/searchbookings.dart';
@@ -81,7 +82,7 @@ class _adminState extends State<admin> {
         },
         children: <Widget>[
          const HomeScreen(),
-          BookLocker(),
+          DefaultBookingPage(),
           const SearchScreen(),
           ScanQrScreen(), 
         ],

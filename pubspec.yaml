@@ -70,6 +70,7 @@ flutter:
       - assets\images\mwlogo.gif
       - assets/
       - assets/icons/
+      - assets\book_locker.jpeg
   
   fonts:
     - family : Poppins
